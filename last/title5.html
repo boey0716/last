@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>實況主</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Chivo:400,900" rel="stylesheet" />
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+<div id="wrapper">
+  <div id="header-wrapper">
+    <div id="header" class="container">
+      <div id="logo">
+        <h1><a href="https://nttustudent.github.io/hw/mean">實況主</a></h1>
+      </div>
+    </div>
+  </div>
+  <div id="menu-wrapper">
+    <div id="menu" class="container">
+      <ul>
+        <li class="current_page_item"><a href="t1.html">英雄聯盟</a></li>
+        <li><a href="aov1.html">傳說對決</a></li>
+        <li><a href="tos1.html">神魔之塔</a></li>
+        <li><a href="else.html">其他</a></li>
+        <li><a href="title5.html">圓餅圖</a></li>
+      </ul>
+    </div>
+    <!-- end #menu --> 
+	</div>
+	<div id="banner"></div>
+	  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'number'],
+          ['Toyz',   164796],
+          ['統神',  44160],
+          ['尚恩',   401776 ],
+          ['佑哥',   227421 ],
+          ['小許',   258634 ],
+          ['阿紅',   221821 ],
+          ['平民百姓',   143020 ],
+          ['國動',   39030 ],
+          ['館長',   54150 ],
+        ]);
+
+        var options = {
+          title: 'youtube頻道訂閱數'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="piechart" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>
